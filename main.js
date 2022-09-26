@@ -55,8 +55,17 @@ function displayResults(responseJson){
   date.innerHTML=dateBuilder(now);
 
   function dateBuilder (date){
-    console.log(date);
-    return date;
+    let months = ["Jan", "Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Oct","Nov","Dec"];
+    let days= ["Sun","Mon","Tue","Wed","Thur","Fri","Sat","Sun"];
+
+    let day = days[date.getDay()];
+    let month = months[date.getMonth()];
+    let year = date.getFullYear();
+
+    return `${day} ${date.getDate()} ${month} ${year}`;
+    
+    // console.log(date);
+    // return date;
   }
 
 }
